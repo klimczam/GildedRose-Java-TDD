@@ -26,5 +26,12 @@ public class GildedRoseTest
 		assertEquals(item.getQuality(), QUALITY-2);
 		assertEquals(item.getSellIn(), -2);
 	}
+	
+	@Test
+	public void qualityMustBePositiveOrEqualsToZero(){
+		Item item = new Item("Aged Brie", SELLIN, 0);
+		GildedRose.updateItem(item);
+		assertEquals(item.getQuality(), 0);
+	}
 
 }

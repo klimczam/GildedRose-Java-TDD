@@ -19,6 +19,12 @@ public class GildedRoseTest
 		assertEquals(item.getSellIn(), SELLIN-1);
 	}
 	
-	
+	@Test
+	public void ifSellInIsNegativeDecreaseQualityOfTwoAndSellInOfOne(){
+		Item item = new Item("Aged Brie", -1, QUALITY);
+		GildedRose.updateItem(item);
+		assertEquals(item.getQuality(), QUALITY-2);
+		assertEquals(item.getSellIn(), -2);
+	}
 
 }

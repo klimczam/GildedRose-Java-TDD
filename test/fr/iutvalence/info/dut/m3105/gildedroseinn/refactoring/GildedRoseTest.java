@@ -33,5 +33,11 @@ public class GildedRoseTest
 		GildedRose.updateItem(item);
 		assertEquals(item.getQuality(), 0);
 	}
-
+	@Test
+	public void increaseQualityOfOneIfTheNameOfTheItemEqualsAgedBrie(){
+		Item item = new Item("Aged Brie", SELLIN, 25);
+		GildedRose.updateItem(item);
+		assertEquals(item.getQuality(), 25 +1 < 50);
+		
+	}
 }
